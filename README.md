@@ -36,9 +36,13 @@ If you ever need to point the form at a different Formspree form, just
 update the `action` URL on the `<form id="commission-form">` element in
 `commission.html`.
 
-That's it — the form already handles file uploads (reference photos), a
-hidden spam-trap field, and shows a success/error message via `js/main.js`
-without leaving the page.
+That's it — the form has a hidden spam-trap field and shows a success/error
+message via `js/main.js` without leaving the page.
+
+Note: the form doesn't accept file uploads (Formspree's free tier rejects
+submissions with an attached file — you'll only get a generic "something went
+wrong" error). Reference photos are collected afterward by emailing the
+client directly, per the note above the submit button.
 
 ## 3. Personalize before launch
 
