@@ -6,7 +6,9 @@ no build step, no framework, so it deploys as-is on free static hosting.
 ## Pages
 
 - `index.html` — homepage (hero, process, featured work, CTA)
-- `gallery.html` — full portfolio with filtering and a lightbox
+- `gallery.html` — full portfolio with two tabs, filtering, and a lightbox:
+  - **Dog Portraits** (`assets/img/gallery/dogs/`) — filterable by Solo Portraits / Human & Hound
+  - **Other Artwork** (`assets/img/gallery/other/`) — fan art and original characters, kept separate so it doesn't get mixed in with commission samples
 - `commission.html` — pricing + commission request form
 
 ## 1. Deploy for free with GitHub Pages
@@ -40,10 +42,11 @@ without leaving the page.
 
 ## 3. Personalize before launch
 
-- **Images**: swap the placeholder illustrations in `assets/img/gallery-0*.svg`
-  for real photos of your artwork. Just replace the files (keep the same
-  names) or update the `src` attributes in `gallery.html` and `index.html`
-  to point at your own `.jpg`/`.png` files.
+- **Images**: add new pieces by dropping a file into `assets/img/gallery/dogs/`
+  or `assets/img/gallery/other/` and adding a matching `<figure class="gallery-card">`
+  block in `gallery.html` (copy an existing one as a template). Dog portraits
+  use `data-category="solo"` or `data-category="duo"` to work with the filter
+  buttons.
 - **Pricing**: update the numbers in the `pricing-grid` section of `commission.html`.
 - **Contact email**: update `hello@houndandhuman.com` in the footer of each page.
 - **Social links**: update the Instagram/Etsy URLs in the footer of each page.

@@ -9,20 +9,40 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // Gallery filtering
+  // Gallery tabs
+  const tabButtons = document.querySelectorAll('.tab-btn');
+  const galleryPanels = document.querySelectorAll('.gallery-panel');
+  tabButtons.forEach((btn) => {
+    btn.addEventListener('click', () => {
+      tabButtons.forEach((b) => {
+        b.classList.remove('active');
+        b.setAttribute('aria-selected', 'false');
+      });
+      btn.classList.add('active');
+      btn.setAttribute('aria-selected', 'true');
+      galleryPanels.forEach((panel) => {
+        panel.classList.toggle('active', panel.dataset.panel === btn.dataset.tab);
+      });
+    });
+  });
+
+  // Gallery filtering (scoped to the Dog Portraits panel only)
   const filterButtons = document.querySelectorAll('.filter-btn');
-  const galleryCards = document.querySelectorAll('.gallery-card');
+  const dogPanel = document.querySelector('[data-panel="dogs"]');
+  const filterableCards = dogPanel ? dogPanel.querySelectorAll('.gallery-card') : [];
   filterButtons.forEach((btn) => {
     btn.addEventListener('click', () => {
       filterButtons.forEach((b) => b.classList.remove('active'));
       btn.classList.add('active');
       const filter = btn.dataset.filter;
-      galleryCards.forEach((card) => {
+      filterableCards.forEach((card) => {
         const match = filter === 'all' || card.dataset.category === filter;
         card.style.display = match ? '' : 'none';
       });
     });
   });
+
+  const galleryCards = document.querySelectorAll('.gallery-card');
 
   // Lightbox
   const lightbox = document.querySelector('.lightbox');

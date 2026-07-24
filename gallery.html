@@ -35,44 +35,92 @@
       <div class="container section-heading">
         <span class="eyebrow">Portfolio</span>
         <h1>The Gallery</h1>
-        <p class="muted">A collection of past commissions. Click any piece for a closer look. Swap these placeholder illustrations for photos of your real artwork whenever you're ready — see the README for how.</p>
+        <p class="muted">A collection of past commissions. Click any piece for a closer look.</p>
       </div>
     </section>
 
     <section>
       <div class="container">
-        <div class="filter-bar">
-          <button class="filter-btn active" data-filter="all">All</button>
-          <button class="filter-btn" data-filter="digital">Digital</button>
-          <button class="filter-btn" data-filter="line-art">Line Art</button>
-          <button class="filter-btn" data-filter="watercolor">Watercolor Style</button>
+        <div class="gallery-tabs" role="tablist">
+          <button class="tab-btn active" role="tab" aria-selected="true" data-tab="dogs">Dog Portraits</button>
+          <button class="tab-btn" role="tab" aria-selected="false" data-tab="other">Other Artwork</button>
         </div>
 
-        <div class="gallery-grid">
-          <figure class="gallery-card" data-category="digital" data-title="Custom Digital Portrait" data-desc="Golden color block, digital illustration">
-            <img src="assets/img/gallery-01.svg" alt="Stylized dog portrait sample in golden yellow tones" />
-            <figcaption class="gallery-caption">Golden Color Block · Digital</figcaption>
-          </figure>
-          <figure class="gallery-card" data-category="digital" data-title="Custom Digital Portrait" data-desc="Turquoise palette, digital illustration">
-            <img src="assets/img/gallery-02.svg" alt="Stylized dog portrait sample in turquoise tones" />
-            <figcaption class="gallery-caption">Turquoise Palette · Digital</figcaption>
-          </figure>
-          <figure class="gallery-card" data-category="line-art" data-title="Minimalist Line Study" data-desc="Ink line art on navy">
-            <img src="assets/img/gallery-03.svg" alt="Minimalist line art dog portrait sample" />
-            <figcaption class="gallery-caption">Line Study · Ink</figcaption>
-          </figure>
-          <figure class="gallery-card" data-category="watercolor" data-title="Sage Watercolor Wash" data-desc="Soft sage watercolor style">
-            <img src="assets/img/gallery-04.svg" alt="Watercolor style dog portrait sample in sage tones" />
-            <figcaption class="gallery-caption">Sage Wash · Watercolor Style</figcaption>
-          </figure>
-          <figure class="gallery-card" data-category="watercolor" data-title="Charcoal Portrait" data-desc="Moody charcoal watercolor style">
-            <img src="assets/img/gallery-05.svg" alt="Watercolor style dog portrait sample in charcoal tones" />
-            <figcaption class="gallery-caption">Charcoal Wash · Watercolor Style</figcaption>
-          </figure>
-          <figure class="gallery-card" data-category="line-art" data-title="Classic Ink Line Portrait" data-desc="Fine ink line art on cream">
-            <img src="assets/img/gallery-06.svg" alt="Fine ink line art dog portrait sample" />
-            <figcaption class="gallery-caption">Fine Line · Ink</figcaption>
-          </figure>
+        <div class="gallery-panel active" data-panel="dogs">
+          <div class="filter-bar">
+            <button class="filter-btn active" data-filter="all">All</button>
+            <button class="filter-btn" data-filter="solo">Solo Portraits</button>
+            <button class="filter-btn" data-filter="duo">Human &amp; Hound</button>
+          </div>
+
+          <div class="gallery-grid">
+            <figure class="gallery-card" data-category="solo" data-title="Golden" data-desc="Digital painting">
+              <img src="assets/img/gallery/dogs/golden.png" alt="Golden retriever portrait holding a plush toy" loading="lazy" />
+              <figcaption class="gallery-caption">Golden</figcaption>
+            </figure>
+            <figure class="gallery-card" data-category="solo" data-title="Camina" data-desc="Digital painting">
+              <img src="assets/img/gallery/dogs/camina.png" alt="German shepherd puppy portrait named Camina" loading="lazy" />
+              <figcaption class="gallery-caption">Camina</figcaption>
+            </figure>
+            <figure class="gallery-card" data-category="solo" data-title="Halloween" data-desc="Digital illustration, costume portrait">
+              <img src="assets/img/gallery/dogs/halloween-costume.png" alt="Bulldog portrait wearing a dragon costume" loading="lazy" />
+              <figcaption class="gallery-caption">Halloween Costume</figcaption>
+            </figure>
+            <figure class="gallery-card" data-category="duo" data-title="Steve and Blade" data-desc="Digital illustration">
+              <img src="assets/img/gallery/dogs/steve-and-blade.png" alt="Portrait of a man standing with his dog Blade" loading="lazy" />
+              <figcaption class="gallery-caption">Steve &amp; Blade</figcaption>
+            </figure>
+            <figure class="gallery-card" data-category="duo" data-title="Steve with Baby Blade" data-desc="Digital painting">
+              <img src="assets/img/gallery/dogs/steve-and-baby-blade.png" alt="Portrait of a man kneeling with his puppy Blade" loading="lazy" />
+              <figcaption class="gallery-caption">Steve &amp; Baby Blade</figcaption>
+            </figure>
+            <figure class="gallery-card" data-category="duo" data-title="Jon Snow and Ghost" data-desc="Digital painting, fan art">
+              <img src="assets/img/gallery/dogs/jon-snow-and-ghost.png" alt="Fan art portrait of Jon Snow walking with his direwolf Ghost" loading="lazy" />
+              <figcaption class="gallery-caption">Jon Snow &amp; Ghost</figcaption>
+            </figure>
+          </div>
+        </div>
+
+        <div class="gallery-panel" data-panel="other">
+          <p class="muted text-center" style="max-width: 640px; margin: 0 auto 2.5rem;">A look at other illustration work outside of pet commissions — fan art and original characters.</p>
+          <div class="gallery-grid">
+            <figure class="gallery-card" data-title="Amos" data-desc="The Expanse fan art">
+              <img src="assets/img/gallery/other/amos-the-expanse.png" alt="Fan art portrait of Amos Burton from The Expanse" loading="lazy" />
+              <figcaption class="gallery-caption">Amos · The Expanse</figcaption>
+            </figure>
+            <figure class="gallery-card" data-title="Avasarala" data-desc="The Expanse fan art">
+              <img src="assets/img/gallery/other/avasarala-the-expanse.png" alt="Fan art portrait of Chrisjen Avasarala from The Expanse" loading="lazy" />
+              <figcaption class="gallery-caption">Avasarala · The Expanse</figcaption>
+            </figure>
+            <figure class="gallery-card" data-title="Bobbi" data-desc="The Expanse fan art">
+              <img src="assets/img/gallery/other/bobbi-the-expanse.png" alt="Fan art portrait of Bobbie Draper from The Expanse" loading="lazy" />
+              <figcaption class="gallery-caption">Bobbi · The Expanse</figcaption>
+            </figure>
+            <figure class="gallery-card" data-title="James Holden" data-desc="The Expanse fan art">
+              <img src="assets/img/gallery/other/james-holden-the-expanse.png" alt="Fan art portrait of James Holden from The Expanse" loading="lazy" />
+              <figcaption class="gallery-caption">James Holden · The Expanse</figcaption>
+            </figure>
+            <figure class="gallery-card" data-title="Miller" data-desc="The Expanse fan art">
+              <img src="assets/img/gallery/other/miller-the-expanse.png" alt="Fan art portrait of Detective Miller from The Expanse" loading="lazy" />
+              <figcaption class="gallery-caption">Miller · The Expanse</figcaption>
+            </figure>
+            <figure class="gallery-card" data-title="Naomi" data-desc="The Expanse fan art">
+              <img src="assets/img/gallery/other/naomi-the-expanse.png" alt="Fan art portrait of Naomi Nagata from The Expanse" loading="lazy" />
+              <figcaption class="gallery-caption">Naomi · The Expanse</figcaption>
+            </figure>
+            <figure class="gallery-card" data-title="DND Original Character" data-desc="Original character illustration">
+              <img src="assets/img/gallery/other/dnd-oc.png" alt="Original character illustration of an armored, skull-masked warrior" loading="lazy" />
+              <figcaption class="gallery-caption">D&amp;D Original Character</figcaption>
+            </figure>
+            <figure class="gallery-card" data-title="ii" data-desc="Character study">
+              <img src="assets/img/gallery/other/ii.png" alt="Character study of a masked drummer" loading="lazy" />
+              <figcaption class="gallery-caption">ii</figcaption>
+            </figure>
+            <figure class="gallery-card" data-title="ii V2" data-desc="Character study">
+              <img src="assets/img/gallery/other/ii-v2.png" alt="Character study of a masked drummer, alternate version" loading="lazy" />
+              <figcaption class="gallery-caption">ii V2</figcaption>
+            </figure>
+          </div>
         </div>
       </div>
     </section>
