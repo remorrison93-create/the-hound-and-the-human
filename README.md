@@ -19,20 +19,20 @@ no build step, no framework, so it deploys as-is on free static hosting.
 
 No cost, no server, no build step required.
 
-## 2. Connect the commission form (Formspree — free tier)
+## 2. Commission form (Formspree — free tier)
 
-The form in `commission.html` submits to [Formspree](https://formspree.io),
-which emails you each submission without needing a backend server. The free
-tier includes 50 submissions/month.
+The form in `commission.html` already submits to your Formspree endpoint
+(`https://formspree.io/f/xykrnryv`), which emails you each submission
+without needing a backend server. The free tier includes 50 submissions/month.
 
-1. Create a free account at https://formspree.io.
-2. Create a new form and copy its **form ID** (looks like `xzbqonvw`).
-3. In `commission.html`, find:
-   ```html
-   <form id="commission-form" action="https://formspree.io/f/YOUR_FORM_ID" ...>
-   ```
-   Replace `YOUR_FORM_ID` with your real ID.
-4. Confirm your email address with Formspree the first time a test submission comes in.
+Submission happens via `fetch()` in `js/main.js` (see the `#commission-form`
+handler) so the page never reloads — it shows an inline success or error
+message instead. Confirm your email address with Formspree the first time a
+real submission comes in (their first-submission verification step).
+
+If you ever need to point the form at a different Formspree form, just
+update the `action` URL on the `<form id="commission-form">` element in
+`commission.html`.
 
 That's it — the form already handles file uploads (reference photos), a
 hidden spam-trap field, and shows a success/error message via `js/main.js`
