@@ -263,11 +263,16 @@ section { padding: clamp(3rem, 8vw, 6rem) 0; }
   border-radius: var(--radius);
   padding: 2rem;
   box-shadow: var(--shadow-soft);
+  text-align: center;
 }
 
 .hero-art img {
   width: 100%;
+  max-width: 300px;
   height: auto;
+  display: inline-block;
+  border-radius: 8px;
+  box-shadow: var(--shadow-soft);
 }
 
 /* ---------- Process strip ---------- */
