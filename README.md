@@ -48,7 +48,7 @@ without leaving the page.
   use `data-category="solo"` or `data-category="duo"` to work with the filter
   buttons.
 - **Pricing**: update the numbers in the `pricing-grid` section of `commission.html`.
-- **Contact email**: update `hello@houndandhuman.com` in the footer of each page.
+- **Contact email**: update `residentsmol@gmail.com` in the footer of each page.
 - **Social links**: update the Instagram/Etsy URLs in the footer of each page.
 - **Testimonial**: replace the placeholder quote on the homepage once you have a real one.
 - **Favicon/brand mark**: `assets/img/logo.png` is used as both the nav/footer logo and the favicon. To update it, replace the file (keep the name, or update the `href`/`src` references in each page's `<head>` and header/footer).
