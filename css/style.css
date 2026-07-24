@@ -120,7 +120,7 @@ section { padding: clamp(3rem, 8vw, 6rem) 0; }
 
 .btn-primary {
   background: var(--color-accent);
-  color: #fff8f1;
+  color: var(--color-charcoal);
 }
 .btn-primary:hover { background: var(--color-accent-dark); }
 
@@ -195,7 +195,8 @@ section { padding: clamp(3rem, 8vw, 6rem) 0; }
 
 .nav-links a.btn.btn-primary,
 .nav-links a.btn.btn-primary:hover {
-  color: #fff8f1;
+  color: var(--color-charcoal);
+  padding: 0.85rem 1.75rem;
   border-color: transparent;
 }
 
